@@ -1,4 +1,15 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Nmedia</string>
     <string name="nmedia">NMedia!</string>
+    <string name="description_post_avatar">Post author avatar</string>
+    <string name="description_post_menu">Post menu</string>
+    <string name="description_post_likes">Post likes</string>
+    <string name="description_post_share">Post share</string>
+    <string name="description_post_viewer">Post viewer</string>
+
+    <string name="post_count_likes" translatable="false">100</string>
+    <string name="post_count_share" translatable="false">50</string>
+    <string name="post_count_viewer" translatable="false">200</string>
+
+
 </resources>
