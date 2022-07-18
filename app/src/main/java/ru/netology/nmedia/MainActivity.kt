@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
+import androidx.core.view.isVisible
 import ru.netology.nmedia.adapter.PostAdapter
 import ru.netology.nmedia.databinding.ActivityMainBinding
 import ru.netology.nmedia.dto.Post
@@ -27,15 +28,16 @@ class MainActivity : AppCompatActivity() {
         }
         viewModel.editPost.observe(this) { post: Post? ->
             val content = post?.content ?: ""
+            binding.groupEditContentMessage.isVisible = post != null
             binding.contentEditText.setText(content)
+            binding.editContentPreview.setText(content)
         }
-
         with(binding) {
             saveButton.setOnClickListener {
                 with(binding.contentEditText) {
                     val content = text.toString()
                     viewModel.onSaveButtonClicked(content)
-                    groupEditContentMessage.visibility = View.GONE
+                    //groupEditContentMessage.visibility = View.GONE
                     clearFocus()
                     hideKeyboard()
                 }
@@ -43,13 +45,13 @@ class MainActivity : AppCompatActivity() {
             cancelButton.setOnClickListener {
                 with(binding.contentEditText) {
                     viewModel.onCancelButtonClicked()
-                    groupEditContentMessage.visibility = View.GONE
+                    //groupEditContentMessage.visibility = View.GONE
                     clearFocus()
                     hideKeyboard()
                 }
             }
             contentEditText.setOnClickListener {
-                groupEditContentMessage.visibility = View.VISIBLE
+                //groupEditContentMessage.visibility = View.VISIBLE
             }
         }
     }

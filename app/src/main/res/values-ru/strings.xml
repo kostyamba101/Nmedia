@@ -11,4 +11,5 @@
     <string name="edit_post_action">Изменить</string>
     <string name="post_content_hint">Содержание поста</string>
     <string name="editContentMessage">Изменяемый пост</string>
+    <string name="description_post_like">Нравится</string>
 </resources>

@@ -105,18 +105,22 @@ class PostRepositoryInMemoryImpl : PostRepository {
     }
 
     override fun save(post: Post) =
-        if (post.id == NEW_POST_ID) insert(post) else update(post)
+        if (post.id == NEW_POST_ID) insert(post)
+        else update(post)
+
     private fun insert(post: Post) {
         val identifiedPost = post.copy(id = nextId++)
         data.value = listOf(identifiedPost) + posts
     }
+
     private fun update(post: Post) {
         data.value = posts.map {
-            if(it.id != post.id) it else post
+            if (it.id != post.id) it
+            else post
         }
     }
+
     private companion object {
         private const val NEW_POST_ID = 0L
     }
-
 }

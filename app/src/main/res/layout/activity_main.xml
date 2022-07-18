@@ -86,11 +86,24 @@
         app:layout_constraintStart_toEndOf="@id/iconEdit"
         app:layout_constraintTop_toTopOf="@id/iconEdit" />
 
+    <TextView
+        android:id="@+id/editContentPreview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_normal"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/iconEdit"
+        app:layout_constraintTop_toBottomOf="@id/editContentMessage"
+        app:layout_constraintEnd_toStartOf="@id/cancelButton"
+        tools:text="@sample/posts.json/data/content" />
+
     <androidx.constraintlayout.widget.Group
         android:id="@+id/groupEditContentMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="editFieldsBarrier2,contentEditText2, cancelButton, iconEdit, editContentMessage" />
+        app:constraint_referenced_ids="editFieldsBarrier2,contentEditText2, cancelButton, iconEdit, editContentMessage, editContentPreview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
