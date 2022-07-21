@@ -57,7 +57,7 @@ class PostViewHolder(
             content.text = post.content
             like.text = post.likes.toString()
             like.isChecked = post.likedByMe
-            countShare.text = checkСount(post.shared)
+            share.text = checkСount(post.shared)
         }
     }
 }
