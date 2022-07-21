@@ -10,6 +10,11 @@
     <string name="post_count_likes" translatable="false"></string>
     <string name="post_count_share" translatable="false"></string>
     <string name="post_count_viewer" translatable="false">200</string>
+    <string name="remove_post_action">Remove</string>
+    <string name="edit_post_action">Edit</string>
+    <string name="post_content_hint">Post content</string>
+    <string name="editContentMessage">Edit post</string>
+    <string name="description_post_like">Like</string>
 
 
 </resources>
